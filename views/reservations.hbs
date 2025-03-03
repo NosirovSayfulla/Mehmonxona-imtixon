@@ -1,0 +1,24 @@
+<h2 class="text-2xl font-semibold text-center">Bandlovlar ro‘yxati</h2>
+<ul class="list-disc list-inside mt-4">
+    {{#each reservations}}
+        <li class="text-lg">Mehmon ID: {{this.guest_id}}</li>
+        <li>Xona ID: {{this.room_id}}</li>
+        <li>Bandlangan sana:{{this.check_in_date}} - {{this.check_out_date}}</li>
+        <li> Holat: {{this.status}}</li>
+    {{/each}}
+</ul>
+
+<h3 class="text-xl font-semibold mt-6">Yangi bandlov qo‘shish</h3>
+<form action="/reservations" method="POST" class="mt-4 flex flex-col max-w-md mx-auto space-y-3">
+    <input type="text" name="guest_id" placeholder="Mehmon ID" required class="border p-2 rounded">
+    <input type="text" name="room_id" placeholder="Xona ID" required class="border p-2 rounded">
+    <input type="date" name="check_in_date" required class="border p-2 rounded">
+    <input type="date" name="check_out_date" required class="border p-2 rounded">
+    <select name="status" required class="border p-2 rounded">
+        <option value="confirmed">Tasdiqlangan</option>
+        <option value="checked_in">Ro'yxatdan o'tgan</option>
+        <option value="checked_out">Tekshirildi</option>
+        <option value="canceled">Bekor qilingan</option>
+    </select>
+    <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded">Qo‘shish</button>
+</form>

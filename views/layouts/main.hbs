@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Hotel Management System</title>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-green-600 text-white py-4 shadow-md">
+        <h1 class="text-3xl font-bold text-center">Hotel Management System</h1>
+        <nav class="flex justify-center mt-2 space-x-4">
+            <a href="/" class="text-lg hover:underline">Bosh sahifa</a>
+            <a href="/guests" class="text-lg hover:underline">Mehmonlar</a>
+            <a href="/rooms" class="text-lg hover:underline">Xonalar</a>
+            <a href="/reservations" class="text-lg hover:underline">Bandlovlar</a>
+            <a href="/register" class="text-lg hover:underline">Register</a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto p-6">
+        {{{body}}}
+    </main>
+</body>
+</html>
